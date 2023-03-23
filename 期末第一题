@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class ma {
+public:
+	void run()
+	{
+		scan();
+		con();
+		print();
+	}
+	void scan()
+	{
+		cin >> a;
+	}
+	void con()
+	{
+		for (int i = 0; a[i] != '\0'; i++)
+		{
+			sum += a[i] - '0';
+		}
+	}
+	void print()
+	{
+		cout << sum;
+	}
+private:
+	char a[10];
+	int sum = 0;
+};
+
+int main()
+{
+	ma m;
+	m.run();
+}
