@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class mainin {
+public:
+	void run()
+	{
+		scan();
+		print();
+	}
+	void scan()
+	{
+		cin >> n;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> sto[i];
+			a[sto[i]]++;
+		}
+	}
+	void print()
+	{
+		for (int i = 0; i < n; i++)
+		{
+			if (a[sto[i]] == 2)
+			{
+				cout << sto[i];
+				a[sto[i]] = 0;
+			}
+		}
+	}
+private:
+	int n;
+	int a[20] = {0};
+	int sto[100];
+};
+
+int main()
+{
+	mainin m;
+	m.run();
+}
