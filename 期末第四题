@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+class con {
+public:
+	int get()
+	{
+		int i = 0;
+		cin >> num;
+		if (num[0] == '-')
+			i++;
+		for (; num[i] != '/'; i++)
+			son = son * 10 + (num[i] - 48);
+		for (i++; num[i] != '\0'; i++)
+			mother = mother * 10 + (num[i] - 48);
+		if (mother == 0)
+		{
+			cout << "error";
+			son = 0;
+			return 1;
+		}
+		if (num[0] == '-')
+			son = -son;
+		return 0;
+	}
+	void com() 
+	{
+		sumson = sumson * mother + son * summon;
+		summon = summon * mother;
+		son = 0;
+		mother = 0;
+	}
+	void print()
+	{
+		sim();
+		if (sumson == 0)
+			cout << 0;
+		else if (summon == 1)
+			cout << sumson;
+		else
+			cout << sumson << "/" << summon;
+	}
+	void sim()
+	{
+		int x;
+		if (sumson < 0)
+			x = -sumson;
+		else
+			x = sumson;
+		for (int i = 2; i <= summon; i++)
+			if (sumson % i == 0 && summon % i == 0)
+			{
+				sumson /= i;
+				summon /= i;
+				i = 2;
+			}
+	}
+private:
+	char num[10];
+	int son = 0, mother = 0;
+	int sumson = 0, summon = 1;
+};
+
+
+
+int main(void)
+{
+	int n;
+	cin >> n;
+	con co;
+	for (int i = 0; i < n; i++)
+	{
+		int x = co.get();
+		if (x == 0)
+			co.com();
+	}
+	co.print();
+}
