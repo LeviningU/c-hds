@@ -1,3 +1,3 @@
-<a herf='https://github.com/LeviningU/c-hds/blob/main'>Course code</a>
+[Course code](https://github.com/LeviningU/c-hds/main "Go to this repositories")
 ====
-for `Levining`
+by [`Levining`](https://github.com/LeviningU "Go to my home page")
